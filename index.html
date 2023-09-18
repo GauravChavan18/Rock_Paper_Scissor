@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- scoreboard div -->
+        <div class="scoreboard-div">
+            <div class="labels-div">
+                <h2>ROCK</h2>
+                <h2>PAPER</h2>
+                <h2>SCISSOR</h2>
+            </div>
+            <div class="score-div">
+                <div class="scores">
+                    <p>COMPUTER SCORE</p>
+                    <p class="computer-score"></p>
+                </div>
+                <div class="scores">
+                    <p>YOUR SCORE</p>
+                    <p class="your-score"></p>
+                </div>
+            </div>
+        </div>
+        <!-- game div -->
+        <div class="playgame-div">
+            <div class="lines-div">
+                <hr class="line-1 line">
+                <hr class="line-2 line">
+                <hr class="line-3 line">
+            </div>
+            <div>
+                <div class="rock-img-div img-div" onclick="imageclick('rock')">
+                    <img src="images/rock.png" alt="" class="rock-img">
+                </div>
+                <div class="scissor-img-div img-div" onclick="imageclick('scissor')">
+                    <img src="images/scissor.png" alt="" class="scissor-img">
+                </div>
+                <div class="paper-img-div img-div" onclick="imageclick('paper')">
+                    <img src="images/paper.png" alt="" class="paper-img">
+                </div>
+            </div>
+        </div>
+        <!-- rule btn and next btn -->
+        <div class="buttons-div">
+            <button class="rules-btn" onclick="rulebtnclick()">RULES</button>
+            <button class="next-btn" onclick="newpage()">NEXT</button>
+        </div>
+        <!-- Rules Button Div Code -->
+        <div class="rule-div">
+            <p>Game Rules</p>
+            <ul style="list-style-type: none;">
+                <li>
+                    <img src="images/Rectangle 5.png" alt="">
+                    Rock beats scissors, scissors beat paper, and paper beats rock.
+                </li>
+                <li>
+                    <img src="images/Rectangle 5.png" alt="">
+                    Agree ahead of time whether you'll count off " rock, paper, scissors, shoot" or just " rock, paper,
+                    scissors"
+                </li>
+                <li>
+                    <img src="images/Rectangle 5.png" alt="">
+                    Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+                </li>
+                <li>
+                    <img src="images/Rectangle 5.png" alt="">
+                    If both players lay down the same hand, each player lays down another hand
+                </li>
+            </ul>
+            <div class="closebtn" onclick="closerulediv()">X</div>
+        </div>
+        <!-- wins/lose/tie display code -->
+        <div class="result-div">
+            <div class="player-res-div res-div">
+                <p>YOU PICKED</p>
+                <div class="res-rock-div img-div">
+                    <img src="images/rock.png" alt="">
+                </div>
+                <div class="res-scissor-div img-div">
+                    <img src="images/scissor.png" alt="">
+                </div>
+                <div class="res-paper-div img-div">
+                    <img src="images/paper.png" alt="">
+                </div>
+            </div>
+            <div class="result-display-div ">
+                <h2 class="result-display-head"></h2>
+                <p class="result-display-para"></p>
+                <div>
+                    <button class="play-again-btn result-btn" onclick="playagain()">PLAY AGAIN</button>
+                    <button class="replay-btn result-btn" onclick="playagain()">REPLAY</button>
+                </div>
+            </div>
+            <div class=" comp-res-div res-div">
+                <p>PC PICKED</p>
+                <div class="comp-res-rock-div img-div">
+                    <img src="images/rock.png" alt="">
+                </div>
+                <div class="comp-res-scissor-div img-div">
+                    <img src="images/scissor.png" alt="">
+                </div>
+                <div class="comp-res-paper-div img-div">
+                    <img src="images/paper.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- new page container code -->
+        <div class="next-page-container">
+            <img src="images/Group 5.png" alt="" class="stars-image">
+            <img src="images/trophy.png" alt="" class="trophy-image">
+            <h1>HURRAY!!</h1>
+            <h2>YOU WON THE GAME</h2>
+            <button onclick="returntogame()">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
